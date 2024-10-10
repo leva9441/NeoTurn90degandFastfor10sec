@@ -24,8 +24,8 @@ public class Constants {
         public static final double StickDeadband = 0.1;
     
         /* The constants below are used in PIDElevator.java */
-        public static final double elevatorP = 0.1;
-        public static final double elevatorI = 0;
-        public static final double elevatorD = 0;
+        public static final double turnP = 0.1;
+        public static final double turnI = 0;
+        public static final double turnD = 0;
       }
 }

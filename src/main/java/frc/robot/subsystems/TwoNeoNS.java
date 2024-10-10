@@ -73,4 +73,16 @@ public class TwoNeoNS extends SubsystemBase{
     }
 
 
+
+    public boolean checkMotorInvertsAreCorrect() {
+        if (nSMotor.getInverted() != Constants.MotorConstants.MotorInvert) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
+
+    
 }
