@@ -18,7 +18,7 @@ public class Constants {
     
         public static final double MotorStartPosition = 0;
     
-        public static final double maxMotorVoltage = 6;
+        public static final double maxMotorVoltage = 10;
     
         /* The constants below are used in ElevatorCommand.java */
         public static final double StickDeadband = 0.1;

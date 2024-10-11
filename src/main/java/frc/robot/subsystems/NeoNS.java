@@ -10,11 +10,11 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkBase.IdleMode;
 import com.revrobotics.CANSparkLowLevel.MotorType;
 
-public class TwoNeoNS extends SubsystemBase{
+public class NeoNS extends SubsystemBase{
     private final CANSparkMax nSMotor;
     private final int motorID;
 
-    public TwoNeoNS(int motorID){
+    public NeoNS(int motorID){
         nSMotor = new CANSparkMax(motorID, MotorType.kBrushless);
         this.motorID = motorID;
         new Thread (() -> {
@@ -28,10 +28,10 @@ public class TwoNeoNS extends SubsystemBase{
     }
     
 
-    public void turnMotorNinety(double speed){
+    public void setMotorVoltage(double speed){
         if (checkMotorInvertsAreCorrect()){
             if (checkMotorMovementsAreValid(speed)){
-                nSMotor.set(speed);
+                nSMotor.setVoltage(speed);
             } else {
                 brakeMotor();
             } 
